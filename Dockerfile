@@ -10,5 +10,5 @@ COPY . .
 
 ENTRYPOINT ["node", "server.js"]
 
-EXPOSE 4000
+EXPOSE 3000
 
