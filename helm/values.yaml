@@ -10,4 +10,5 @@ env:
   DB_PASSWORD: root
   DB_NAME: babyfoot_db
   DB_PORT: 5432
+  DB_SSL: false
 nodePort: 30000

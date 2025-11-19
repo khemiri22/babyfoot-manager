@@ -1,7 +1,7 @@
 services:
   babyfoot-manager:
     image: khemiri22/babyfoot-manager:latest
-    container_name: babyfoot_manager
+    container_name: babyfoot_manager_container
     restart: unless-stopped
     ports:
       - "3000:3000"
@@ -11,6 +11,7 @@ services:
       DB_NAME: babyfoot_db
       DB_USER: root
       DB_PASSWORD: root
+      DB_SSL: false
       PORT: 3000
     depends_on:
       - db
