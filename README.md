@@ -29,8 +29,6 @@ A lightweight manager for organizing **babyfoot games**, players, and matches. D
 git clone https://github.com/khemiri22/babyfoot-manager.git
 cd babyfoot-manager
 npm install
-cp .env.example .env
-# ✏️ Edit .env to configure database and secrets
 ```
 
 ### **Run**
@@ -48,7 +46,7 @@ npm start
 Add or edit the following variables in `.env`:
 
 ```env
-PORT=4000           # 🖥 Babyfoot Manager app port
+PORT=3000           # 🖥 Babyfoot Manager app port
 DB_HOST=127.0.0.1   # 🐘 Database host or IP
 DB_USER=user        # 👤 Database user
 DB_PASSWORD=password # 🔑 Database password
