@@ -1,0 +1,13 @@
+replicas: 1
+image: docker.io/khemiri22/babyfoot-manager
+tag: latest
+containerName: babyfoot-manager-container
+port: 3000
+env:
+  PORT: 3000
+  DB_HOST: 192.168.59.193
+  DB_USER: root
+  DB_PASSWORD: root
+  DB_NAME: babyfoot_db
+  DB_PORT: 5432
+nodePort: 30000

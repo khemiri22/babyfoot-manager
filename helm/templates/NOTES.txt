@@ -1,0 +1,5 @@
+The Application is available on node port 30000
+
+You need an external Postgres DB connection, change the default values is you need.
+
+ENJOY BABY-FOOTING!

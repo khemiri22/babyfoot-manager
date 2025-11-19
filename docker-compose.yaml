@@ -1,0 +1,37 @@
+services:
+  babyfoot-manager:
+    image: khemiri22/babyfoot-manager:latest
+    container_name: babyfoot_manager
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: babyfoot_db
+      DB_USER: root
+      DB_PASSWORD: root
+      PORT: 3000
+    depends_on:
+      - db
+    networks:
+      - babyfoot-network
+  db:
+    image: postgres:16
+    container_name: postgres_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: babyfoot_db
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - babyfoot-network
+volumes:
+  db_data:
+  
+networks:
+  babyfoot-network:
